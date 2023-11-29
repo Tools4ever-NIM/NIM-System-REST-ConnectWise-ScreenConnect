@@ -1,0 +1,150 @@
+{
+    "schema": {
+        "options": {},
+        "crud_objects": {
+            "sessions":{
+                "operations":{
+                    "sessionsList":{
+                        "method":"get",
+                        "call": {
+                            "mode":"normal",
+                            "path": "/Service.ashx/GetSessionList"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "parameters":{},
+                "key":"id",
+                "resources":{
+                    "SessionID": "string*",
+                    "SessionType": "number*",
+                    "Name": "string*",
+                    "Host": "string*",
+                    "IsPublic": "boolean*",
+                    "Code": "string*",
+                    "LegacyEncryptionKey": "string*",
+                    "GuestPublicKey": "string*",
+                    "CustomPropertyValues":  ["string*"],
+                    "GuestInfo": {
+                        "LoggedOnUserDomain": "_:string*",
+                        "LoggedOnUserName": "_:string*",
+                        "LastActivityTime": "_:string*",
+                        "MachineName": "_:string*",
+                        "MachineDomain": "_:string*",
+                        "OperatingSystemName": "_:string*",
+                        "OperatingSystemVersion": "_:string*",
+                        "ProcessorName": "_:string*",
+                        "ProcessorVirtualCount": "_:string*",
+                        "SystemMemoryTotalMegabytes": "_:string*",
+                        "SystemMemoryAvailableMegabytes": "_:string*",
+                        "Attributes": "_:string*",
+                        "WakeToken": "_:string*",
+                        "ScreenshotContentHash": "_:string*",
+                        "ScreenshotContentType": "_:string*",
+                        "OperatingSystemManufacturerName": "_:string*",
+                        "OperatingSystemLanguage": "_:string*",
+                        "OperatingSystemInstallationTime": "_:string*",
+                        "MachineManufacturerName": "_:string*",
+                        "MachineModel": "_:string*",
+                        "MachineProductNumber": "_:string*",
+                        "MachineSerialNumber": "_:string*",
+                        "MachineDescription": "_:string*",
+                        "ProcessorArchitecture": "_:string*",
+                        "PrivateNetworkAddress": "_:string*",
+                        "HardwareNetworkAddress": "_:string*",
+                        "TimeZoneName": "_:string*",
+                        "TimeZoneOffsetHours": "_:string*",
+                        "LastBootTime": "_:string*"
+                    },
+                    "GuestInfoUpdateTime": "string*",
+                    "PendingRequestEvents": ["string*"],
+                    "AddedNoteEvents": ["string*"],
+                    "Notes": "string*",
+                    "QueuedEvents": ["string*"],
+                    "QueuedEventType": "string*",
+                    "QueuedEventHost": "string*",
+                    "QueuedEventData": "string*",
+                    "QueuedEventConnectionID": "string*",
+                    "UnacknowledgedEvents": ["string*"],
+                    "FirstEventTime": "string*",
+                    "LastEventTime": "string*",
+                    "LastConnectedEventTime": "string*",
+                    "LastHostConnectedEventTime": "string*",
+                    "LastGuestConnectedEventTime": "string*",
+                    "LastGuestDisconnectedEventTime": "string*",
+                    "LastDisconnectedEventTime": "string*",
+                    "LastRanAutoReinstallEventTime": "string*",
+                    "LastNeedsAcknowledgementEventTime": "string*",
+                    "LastAcknowledgementEventTime": "string*",
+                    "LastInitiatedJoinEventTime": "string*",
+                    "LastInitiatedJoinEventHost": "string*",
+                    "IsDeleted": "boolean*",
+                    "IsEnded": "boolean*",
+                    "GuestNetworkAddress": "string*",
+                    "GuestClientVersion": "string*",
+                    "Attributes": "string*",
+                    "ActiveConnections": [
+                        {
+                            "ConnectedTime": "string*",
+                            "ConnectionID": "string*",
+                            "ProcessType": "string*",
+                            "ParticipantName": "string*",
+                            "ClientType": "string*",
+                            "ClientVersion": "string*",
+                            "Attributes": "string*",
+                            "NetworkAddress": "string*",
+                            "ClientMachineCookie": "string*"
+                        }
+                    ],
+                    "LastAlteredVersion": "string*",
+                    "LogonSessions": [
+                        {
+                            "LogonSessionAttributes": "string*",
+                            "LogonSessionID": "string*",
+                            "DisplayName": "string*"
+                        }
+                    ]
+                }
+            }
+        }
+		
+	},
+    "rest": {
+        "config": {
+            "baseUrl": "https://{tenant_id}/App_Extensions/{extension_id}",
+            "get": {
+                "query_parameters": {
+                }
+            },
+            "authentication": "aeries",
+            "call_handling": "generic",
+            "test_connection": {
+                "url": "/Service.ashx/GetSessionList"
+            },
+            "socket_timeout": 3600000,
+            "accept": "application/json",
+            "headers": {
+                "Tools4everClientSecret": "{client_secret}"
+            }
+
+        }
+    },
+    "connection":{
+        "items": [
+            {
+                "name": "tenant_id",
+                "type": "textbox",
+                "label": "Tenent URL:",
+                "value": "customer.screenconnect.com"
+            },
+            {
+                "name": "extension_id",
+                "type": "textbox",
+                "label": "Extension ID:",
+                "value": ""
+            }
+        ]
+    }
+}
