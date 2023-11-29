@@ -134,12 +134,6 @@
     "connection":{
         "items": [
             {
-                "name": "tenant_id",
-                "type": "textbox",
-                "label": "Tenent URL:",
-                "value": "customer.screenconnect.com"
-            },
-            {
                 "name": "extension_id",
                 "type": "textbox",
                 "label": "Extension ID:",
