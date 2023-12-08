@@ -2,7 +2,7 @@
     "schema": {
         "options": {},
         "crud_objects": {
-            "sessions":{
+            "sessions":{  
                 "operations":{
                     "sessionsList":{
                         "method":"get",
@@ -137,7 +137,7 @@
                 "name": "extension_id",
                 "type": "textbox",
                 "label": "Extension ID:",
-                "value": ""
+                "value": "a143140b-63f1-4e52-acaa-36add402f4e6"
             }
         ]
     }
