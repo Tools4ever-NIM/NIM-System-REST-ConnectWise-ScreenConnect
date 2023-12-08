@@ -107,6 +107,37 @@
                         }
                     ]
                 }
+            },
+            "sessionCustomFields":{  
+                "operations":{
+                    "sessionsList":{
+                        "method":"get",
+                        "verb":"post",
+                        "call": {
+                            "mode": "iteration",
+                            "table": "sessions",
+                            "iterator": "SessionID",
+                            "path": "/Service.ashx/GetSessionCustomFieldsBySessionID"
+                        },
+                        "body":["{iterator}"],
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "parameters":{},
+                "key":"id",
+                "resources":{
+                    "SessionID": "string*",
+                    "CustomPropertyValue01": "string*",
+                    "CustomPropertyValue02": "string*",
+                    "CustomPropertyValue03": "string*",
+                    "CustomPropertyValue04": "string*",
+                    "CustomPropertyValue05": "string*",
+                    "CustomPropertyValue06": "string*",
+                    "CustomPropertyValue07": "string*",
+                    "CustomPropertyValue08": "string*"
+                }
             }
         }
 		
