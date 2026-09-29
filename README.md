@@ -1,4 +1,7 @@
 # ConnectWise ScreenConnect
+
+Read the [ConnectWise ScreenConnect integration documentation](https://docs.nimsuite.com/en/integrations/connectwise-screenconnect) for connector details and related guides.
+
 <img src="https://github.com/Tools4ever-NIM/NIM-System-REST-ConnectWise-ScreenConnect/assets/24281600/e5286218-d4fa-4444-a51c-ac827c8ffc66" width="256px" />
 
 
